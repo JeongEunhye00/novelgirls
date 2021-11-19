@@ -75,8 +75,8 @@ y = to_categorical(y, num_classes=vocab_size)
 # Commented out IPython magic to ensure Python compatibility.
 # %cd /content/drive/MyDrive/Colab\ Notebooks/novelgirls
 
-from keras.models import load_model
-model = load_model('./BERT/hair_NLG_model.pkl')
+from tensorflow.keras.models import load_model
+model = load_model('../trained_model/hair_NLG_model.pkl')
 
 def sentence_generation(current_word, n, model= model, tokenizer=tokenizer): # 모델, 토크나이저, 현재 단어, 반복할 횟수
     init_word = current_word
