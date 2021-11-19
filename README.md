@@ -68,4 +68,4 @@ BERT는 tensorflow==1.15.0, LSTM은 tensorflow==2.X를 써서 같은 환경에�
 
 ![image](https://user-images.githubusercontent.com/81811255/142640890-827a8327-cb34-4190-828e-5534b9f4c034.png)
 
-그러면 위의 디렉토리에 생성된 class_output.txt를 이용하여 get_output_nlg.py에서 최종적으로 문장 생성.
+- 이렇게 진행해서 get_output_nlg.py을 실행하면, 위의 디렉토리에 생성된 class_output.txt를 이용하여 최종적으로 문장 생성 가능
