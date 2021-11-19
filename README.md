@@ -25,6 +25,7 @@ BERT는 tensorflow==1.15.0, LSTM은 tensorflow==2.X를 써서 같은 환경에�
 그래서 BERT와 LSTM의 환경을 분리하여 BERT의 결과를 LSTM으로 넘겨 사용할 예정입니다.
 
 
+
 ### 1. BERT와 LSTM의 디렉토리를 분리
 
 <LSTM 디렉토리>
@@ -35,6 +36,7 @@ BERT는 tensorflow==1.15.0, LSTM은 tensorflow==2.X를 써서 같은 환경에�
 <BERT 디렉토리>
 
 ![image](https://user-images.githubusercontent.com/81811255/142639618-69eb233a-4629-4f2a-8619-9baaa068b1ad.png)
+
 
 
 ### 2. BERT용 가상환경, LSTM용 가상환경, 총 2개의 가상환경을 생성(nl_bert, nl_lstm)
@@ -53,6 +55,7 @@ BERT는 tensorflow==1.15.0, LSTM은 tensorflow==2.X를 써서 같은 환경에�
 - pip install pandas
 
 
+
 ### 3. 각 가상환경에서 각 디렉토리를 실행
 
 - BERT의 get_output_bert를 실행하면 eye_color_pred와 hair_color_pred가 임포트되어 분류한 label이 txt파일로 저장됨
@@ -65,3 +68,4 @@ BERT는 tensorflow==1.15.0, LSTM은 tensorflow==2.X를 써서 같은 환경에�
 
 ![image](https://user-images.githubusercontent.com/81811255/142640890-827a8327-cb34-4190-828e-5534b9f4c034.png)
 
+그러면 위의 디렉토리에 생성된 class_output.txt를 이용하여 get_output_nlg.py에서 최종적으로 문장 생성.
