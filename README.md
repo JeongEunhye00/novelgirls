@@ -25,7 +25,7 @@ BERT는 tensorflow==1.15.0, LSTM은 tensorflow==2.X를 써서 같은 환경에�
 그래서 BERT와 LSTM의 환경을 분리하여 BERT의 결과를 LSTM으로 넘겨 사용할 예정입니다.
 
 
-1. BERT와 LSTM의 디렉토리를 분리
+### 1. BERT와 LSTM의 디렉토리를 분리
 
 <LSTM 디렉토리>
 
@@ -37,31 +37,29 @@ BERT는 tensorflow==1.15.0, LSTM은 tensorflow==2.X를 써서 같은 환경에�
 ![image](https://user-images.githubusercontent.com/81811255/142639618-69eb233a-4629-4f2a-8619-9baaa068b1ad.png)
 
 
-2. BERT용 가상환경, LSTM용 가상환경, 총 2개의 가상환경을 생성(nl_bert, nl_lstm)
+### 2. BERT용 가상환경, LSTM용 가상환경, 총 2개의 가상환경을 생성(nl_bert, nl_lstm)
 <nl_bert>
 
-pip install tensorflow==1.15.0
-pip install --upgrade tb-nightly
-pip install bert-tensorflow==1.0.1
-pip install pandas
+- pip install tensorflow==1.15.0
+- pip install --upgrade tb-nightly
+- pip install bert-tensorflow==1.0.1
+- pip install pandas
 
 
 <nl_lstm>
 
-pip install tensorflow
-(저는 따로 버전을 지정해주지 않았는데, 2.X 버전이면 되는 것 같습니다.)
-pip install pandas
+- pip install tensorflow
+- (저는 따로 버전을 지정해주지 않았는데, 2.X 버전이면 되는 것 같습니다.)
+- pip install pandas
 
 
-3. 각 가상환경에서 각 디렉토리를 실행
+### 3. 각 가상환경에서 각 디렉토리를 실행
 
-BERT의 get_output_bert를 실행하면 eye_color_pred와 hair_color_pred가 임포트되어 분류한 label이 txt파일로 저장됨
+- BERT의 get_output_bert를 실행하면 eye_color_pred와 hair_color_pred가 임포트되어 분류한 label이 txt파일로 저장됨
+- LSTM의 get_output_lstm에서 이 txt파일을 이용하여 문장 생성.
+- 따라서 txt파일이 LSTM 디렉토리로 들어가야함.
 
-LSTM의 get_output_lstm에서 이 txt파일을 이용하여 문장 생성.
-
-따라서 txt파일이 LSTM 디렉토리로 들어가야함.
-
-![image](https://user-images.githubusercontent.com/81811255/142640679-46a6f494-1c07-456d-ba33-6bb2f3952e92.png)
+``` class_output= open('C:/Users/82102/Desktop/test/BERT/class_output.txt', 'w') ```
 
 그러므로 get_output_bert의 위 코드에 LSTM 디렉토리의 BERT 디렉토리 주소를 넣어야함.
 
