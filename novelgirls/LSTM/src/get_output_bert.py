@@ -18,8 +18,7 @@ Original file is located at
 # !pip install --upgrade tb-nightly
 # !pip install bert-tensorflow==1.0.1
 
-import eye_color_pred
-import hair_color_pred
+from novelgirls.BERT.src import eye_color_pred, hair_color_pred
 
 # input을 어떻게 받으시는지 몰라 임시로 넣어두었습니다.
 input_sentence=['', 'My eyes color is blue. and my hair color is brown.']

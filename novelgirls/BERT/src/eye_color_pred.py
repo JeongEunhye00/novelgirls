@@ -1,7 +1,7 @@
 import tensorflow as tf
 from bert import run_classifier
 from model import model_fn_builder
-from create_tokenizer import create_tokenizer_from_hub_module as create_tokenizer
+from novelgirls.BERT.src.create_tokenizer import create_tokenizer_from_hub_module as create_tokenizer
 
 
 MODEL_DIR = './BERT/bert_eye_color'

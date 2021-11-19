@@ -13,12 +13,14 @@ Original file is located at
 import nlg_eye
 import nlg_hair
 
-inf= open('./BERT/class_output.txt', 'r')
-cls= inf.read()
-eye, hair= cls.split('\t')
-inf.close()
+# inf= open('./BERT/class_output.txt', 'r')
+# cls= inf.read()
+# eye, hair= cls.split('\t')
+# inf.close()
+eye = 'brown'
+hair = 'black'
 
-def get_output(in_gender, eye=eye, hair=hair):
+def get_output(in_gender, eye, hair):
   in_eye= 'eye color is '+ eye +'.'
   in_hair= 'hair color is '+ hair +'.'
   n=15 #문장 길이
@@ -43,7 +45,7 @@ def get_output(in_gender, eye=eye, hair=hair):
         temp[i]='he'
       elif data=='her':
         temp[i]='his'
-    
+
   else:
     for i, data in enumerate(temp):
       if data=='he':
@@ -60,3 +62,6 @@ def get_output(in_gender, eye=eye, hair=hair):
 # result= get_output(1)
 # print(result)
 
+
+res = get_output(0, eye, hair)
+print(res)

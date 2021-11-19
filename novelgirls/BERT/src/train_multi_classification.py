@@ -5,8 +5,8 @@ from sklearn.model_selection import train_test_split
 
 import bert
 from bert import run_classifier
-from model import model_fn_builder
-from create_tokenizer import create_tokenizer_from_hub_module as create_tokenizer
+from novelgirls.BERT.src.model import model_fn_builder
+from novelgirls.BERT.src.create_tokenizer import create_tokenizer_from_hub_module as create_tokenizer
 
 OUTPUT_DIR = './BERT/bert_eye_color'
 # OUTPUT_DIR = './BERT/bert_hair_color'
