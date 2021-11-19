@@ -12,7 +12,7 @@
   - https://drive.google.com/file/d/1rk7TEhwTGJqIOd3gAcV55szrrYEBY-lm/view?usp=sharing
 
 - hair nlg model.pkl
-  - ``LSTM/trained_model```
+  - ```LSTM/trained_model```
   - https://drive.google.com/file/d/1ONRFnbfAVl_VDZ7IEdApBCGGhZ_OU6F9/view?usp=sharing
 
 - eye nlg model.pkl
