@@ -19,7 +19,10 @@
   - ```LSTM/trained_model```
   - https://drive.google.com/file/d/1qhvvMX1MMLPNJer_doUZiIF_JcMYQ8ki/view?usp=sharing
 
-* 실행 요령
+
+
+
+## * 실행 요령
 
 BERT는 tensorflow==1.15.0, LSTM은 tensorflow==2.X를 써서 같은 환경에서 돌리면 둘 중 하나에서는 에러가 발생합니다.
 그래서 BERT와 LSTM의 환경을 분리하여 BERT의 결과를 LSTM으로 넘겨 사용할 예정입니다.
