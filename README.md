@@ -10,4 +10,9 @@
   - https://drive.google.com/file/d/1rk7TEhwTGJqIOd3gAcV55szrrYEBY-lm/view?usp=sharing
 
 - hair nlg model.pkl
+
 https://drive.google.com/file/d/1ONRFnbfAVl_VDZ7IEdApBCGGhZ_OU6F9/view?usp=sharing
+
+- eye nlg model.pkl
+
+ https://drive.google.com/file/d/1qhvvMX1MMLPNJer_doUZiIF_JcMYQ8ki/view?usp=sharing
