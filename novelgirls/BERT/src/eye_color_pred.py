@@ -1,6 +1,6 @@
 import tensorflow as tf
 from bert import run_classifier
-from model import model_fn_builder
+from novelgirls.BERT.src.model import model_fn_builder
 from novelgirls.BERT.src.create_tokenizer import create_tokenizer_from_hub_module as create_tokenizer
 
 
