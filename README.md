@@ -4,9 +4,11 @@
 훈련된 모델 다운
 
 - eye color
+  - ```BERT/trained_model/bert_eye_color```
   - https://drive.google.com/file/d/1OSlpy4YfCLxg6ng4Z7xhHHkSuLWh3QqE/view?usp=sharing
 
 - hair color
+  - ```BERT/trained_model/bert_hair_color```
   - https://drive.google.com/file/d/1rk7TEhwTGJqIOd3gAcV55szrrYEBY-lm/view?usp=sharing
 
 - hair nlg model.pkl
