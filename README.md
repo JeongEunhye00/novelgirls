@@ -28,10 +28,12 @@ BERT는 tensorflow==1.15.0, LSTM은 tensorflow==2.X를 써서 같은 환경에�
 1. BERT와 LSTM의 디렉토리를 분리
 
 <LSTM 디렉토리>
+
 ![image](https://user-images.githubusercontent.com/81811255/142639536-82a2fa22-bb0b-4a39-bb89-05fc46552acc.png)
 
 
 <BERT 디렉토리>
+
 ![image](https://user-images.githubusercontent.com/81811255/142639618-69eb233a-4629-4f2a-8619-9baaa068b1ad.png)
 
 
@@ -39,20 +41,15 @@ BERT는 tensorflow==1.15.0, LSTM은 tensorflow==2.X를 써서 같은 환경에�
 <nl_bert>
 
 pip install tensorflow==1.15.0
-
 pip install --upgrade tb-nightly
-
 pip install bert-tensorflow==1.0.1
-
 pip install pandas
 
 
 <nl_lstm>
 
 pip install tensorflow
-
 (저는 따로 버전을 지정해주지 않았는데, 2.X 버전이면 되는 것 같습니다.)
-
 pip install pandas
 
 
