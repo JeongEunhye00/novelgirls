@@ -8,8 +8,8 @@ from bert import run_classifier
 from novelgirls.BERT.src.model import model_fn_builder
 from novelgirls.BERT.src.create_tokenizer import create_tokenizer_from_hub_module as create_tokenizer
 
-OUTPUT_DIR = './BERT/trained_model/bert_eye_color'
-# OUTPUT_DIR = './BERT/trained_model/bert_hair_color'
+''' 모델 저장할 경로 입력'''
+OUTPUT_DIR = ''
 
 DO_DELETE = False
 
