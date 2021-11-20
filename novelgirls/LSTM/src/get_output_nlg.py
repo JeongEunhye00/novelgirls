@@ -1,5 +1,5 @@
-from novelgirls.LSTM.src import nlg_eye
-from novelgirls.LSTM.src import nlg_hair
+from LSTM.src import nlg_eye
+from LSTM.src import nlg_hair
 
 
 def get_output(in_gender, eye, hair):
