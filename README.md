@@ -13,7 +13,7 @@
 
 - hair nlg model.pkl & eye nlg model.pkl
   - ```LSTM/trained_model```
-  -https://drive.google.com/drive/folders/1n-CbeyT6kHA10cXVbs6GsMeeRj_ofLeL?usp=sharing
+  - https://drive.google.com/drive/folders/1n-CbeyT6kHA10cXVbs6GsMeeRj_ofLeL?usp=sharing
 
 
 
