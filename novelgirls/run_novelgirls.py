@@ -2,9 +2,9 @@ from PyQt5.QtWidgets import *
 from PyQt5 import uic, QtCore
 from PyQt5.QtGui import QPixmap
 import sys
-# from novelgirls.BERT.src.eye_color_pred import get_prediction as eye_pred
-# from novelgirls.BERT.src.hair_color_pred import get_prediction as hair_pred
-# from novelgirls.LSTM.src.get_output_nlg import get_output
+from BERT.src.eye_color_pred import get_prediction as eye_pred
+from BERT.src.hair_color_pred import get_prediction as hair_pred
+from LSTM.src.get_output_nlg import get_output
 
 main_ui = 'UI/main.UI'
 form_1, base_1 = uic.loadUiType(main_ui)
@@ -65,12 +65,12 @@ class input_text_page(base_2, form_2):
         l.append(text)
         print(l[1])
         print(gender)
-        # eye_color = eye_pred(l)
-        # hair_color = hair_pred(l)
+        eye_color = eye_pred(l)
+        hair_color = hair_pred(l)
         global res
-        res = '어떡해요ㅜㅜ'
-        # res = get_output(gender, eye_color[1][2], hair_color[1][2])
-        # print(res)
+        # res = '어떡해요ㅜㅜ'
+        res = get_output(gender, eye_color[1][2], hair_color[1][2])
+        print(res)
         self.change()
 
     def change(self):
