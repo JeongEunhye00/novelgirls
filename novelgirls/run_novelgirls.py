@@ -54,7 +54,6 @@ class input_text_page(base_2, form_2):
         self.show()
         self.in_btn.clicked.connect(self.button_event)
 
-    """ 이 부분이 자꾸ㅜㅜ 막혀요ㅜㅜ"""
     def button_event(self):
         self.label.setText('*** 입력해주신 문장으로 글을 쓰는 중이에요! ***')
         self.label.setAlignment(QtCore.Qt.AlignCenter)
@@ -68,7 +67,6 @@ class input_text_page(base_2, form_2):
         eye_color = eye_pred(l)
         hair_color = hair_pred(l)
         global res
-        # res = '어떡해요ㅜㅜ'
         res = get_output(gender, eye_color[1][2], hair_color[1][2])
         print(res)
         self.change()
