@@ -7,7 +7,7 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.utils import to_categorical
 from tensorflow.keras.models import load_model
 
-df_eye = pd.read_csv('LSTM/Datasets/train_eye_novel.tsv', sep='\t')
+df_eye = pd.read_csv('../Datasets/train_eye_novel.tsv', sep='\t')
 
 """NULL값은 없으므로 결측값 제거 과정은 생략"""
 
@@ -58,7 +58,7 @@ y = to_categorical(y, num_classes=vocab_size)
 
 """### model"""
 
-model = load_model('LSTM/trained_model/eye_NLG_model.pkl')
+model = load_model('../trained_model/eye_NLG_model.pkl')
 
 
 def sentence_generation(current_word, n, model=model, tokenizer=tokenizer):    # 모델, 토크나이저, 현재 단어, 반복할 횟수
