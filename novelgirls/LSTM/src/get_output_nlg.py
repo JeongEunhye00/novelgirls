@@ -1,54 +1,39 @@
-import nlg_eye
-import nlg_hair
-
-inf= open('../class_output.txt', 'r')
-cls= inf.read()
-eye, hair= cls.split('\t')
-inf.close()
+from novelgirls.LSTM.src import nlg_eye
+from novelgirls.LSTM.src import nlg_hair
 
 
 def get_output(in_gender, eye, hair):
-  in_eye= 'eye color is '+ eye +'.'
-  in_hair= 'hair color is '+ hair +'.'
-  n=15 #문장 길이
+    in_eye = 'eye color is ' + eye + '.'
+    in_hair = 'hair color is ' + hair + '.'
+    n = 15  # 문장 길이
 
-  out_eye= nlg_eye.sentence_generation(in_eye, n)
-  out_eye= out_eye.split('.')
+    out_eye = nlg_eye.sentence_generation(in_eye, n)
+    out_eye = out_eye.split('.')
 
-  out_hair= nlg_hair.sentence_generation(in_hair, n)
-  out_hair= out_hair.split('.')
+    out_hair = nlg_hair.sentence_generation(in_hair, n)
+    out_hair = out_hair.split('.')
 
-  out_eye= out_eye[1]
-  out_hair= out_hair[1]
-  out_sentence= out_eye +'. '+out_hair + '.'
+    out_eye = out_eye[1]
+    out_hair = out_hair[1]
+    out_sentence = out_eye + '. ' + out_hair + '.'
 
-  gender= {0:'male', 1:'female'}
-  #성별을 0, 1로 입력받는다고 가정
+    temp = out_sentence.split(' ')
+    if in_gender == 0:  # 남성
+        for i, data in enumerate(temp):
+            if data == 'she':
+                temp[i] = 'he'
+            elif data == 'her':
+                temp[i] = 'his'
 
-  temp= out_sentence.split(' ')
-  if gender[in_gender]=='male':
+    else: # 여성
+        for i, data in enumerate(temp):
+            if data == 'he':
+                temp[i] = 'she'
+            elif data == 'his':
+                temp[i] = 'her'
+
+    result = ''
     for i, data in enumerate(temp):
-      if data=='she':
-        temp[i]='he'
-      elif data=='her':
-        temp[i]='his'
-
-  else:
-    for i, data in enumerate(temp):
-      if data=='he':
-        temp[i]='she'
-      elif data=='his':
-        temp[i]='her'
-
-  result=''
-  for i, data in enumerate(temp):
         result += data+' '
 
-  return result
-
-# result= get_output(1)
-# print(result)
-
-
-res = get_output(0, eye, hair)
-print(res)
+    return result
