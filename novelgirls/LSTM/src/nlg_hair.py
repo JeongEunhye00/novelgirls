@@ -5,21 +5,21 @@ from string import punctuation
 from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.utils import to_categorical
+from tensorflow.keras.models import load_model
 
-#왜인지? 모르겠지만? train data를 불러와야 오류가 안 나서... 극한의 비효율이지만 그냥.. 불러왔습니다..
-df_eye= pd.read_csv('../Datasets/train_hair_novel.tsv', sep='\t')
+df_eye= pd.read_csv('LSTM/Datasets/train_hair_novel.tsv', sep='\t')
 
 """NULL값은 없으므로 결측값 제거 과정은 생략"""
 
 headline= []
 headline.extend(list(df_eye.text.values))
-# 왜 list이름이 headline? -> 참고 코드가 headline를 쓰는데, 코드 긁으면서 변수명 수정하기 번거로워서...
 
-# 참고 코드 그대로 전처리
+
 def repreprocessing(raw_sentence):
     preproceseed_sentence = raw_sentence.encode("utf8").decode("ascii",'ignore')
     # 구두점 제거와 동시에 소문자화
     return ''.join(word for word in preproceseed_sentence if word not in punctuation).lower()
+
 
 preporcessed_headline = [repreprocessing(x) for x in headline]
 
@@ -39,7 +39,7 @@ for sentence in preporcessed_headline:
 # sequences[:11]
 
 index_to_word = {}
-for key, value in tokenizer.word_index.items(): # 인덱스를 단어로 바꾸기 위해 index_to_word를 생성
+for key, value in tokenizer.word_index.items():     # 인덱스를 단어로 바꾸기 위해 index_to_word를 생성
     index_to_word[value] = key
 
 # print('빈도수 상위 1번 단어 : {}'.format(index_to_word[1]))
@@ -58,8 +58,8 @@ y = to_categorical(y, num_classes=vocab_size)
 
 """### model"""
 
-from tensorflow.keras.models import load_model
-model = load_model('../trained_model/hair_NLG_model.pkl')
+model = load_model('LSTM/trained_model/hair_NLG_model.pkl')
+
 
 def sentence_generation(current_word, n, model= model, tokenizer=tokenizer): # 모델, 토크나이저, 현재 단어, 반복할 횟수
     init_word = current_word
