@@ -5,8 +5,8 @@ from sklearn.model_selection import train_test_split
 
 import bert
 from bert import run_classifier
-from novelgirls.BERT.src.model import model_fn_builder
-from novelgirls.BERT.src.create_tokenizer import create_tokenizer_from_hub_module as create_tokenizer
+from BERT.src.model import model_fn_builder
+from BERT.src.create_tokenizer import create_tokenizer_from_hub_module as create_tokenizer
 
 ''' 모델 저장할 경로 입력'''
 OUTPUT_DIR = ''

@@ -1,4 +1,4 @@
-from novelgirls.BERT.src import eye_color_pred, hair_color_pred
+from BERT.src import eye_color_pred, hair_color_pred
 
 # input을 어떻게 받으시는지 몰라 임시로 넣어두었습니다.
 input_sentence=['', 'My eyes color is blue. and my hair color is brown.']
