@@ -22,19 +22,19 @@ if DO_DELETE:
 tf.gfile.MakeDirs(OUTPUT_DIR)
 print('***** Model output directory: {} *****'.format(OUTPUT_DIR))
 
-train = pd.read_excel("../Datasets/Data_Train.xlsx").loc[:, ['description', 'eye_color']]
+train = pd.read_excel("BERT/Datasets/Data_Train.xlsx").loc[:, ['description', 'eye_color']]
 train['eye_color'] = train['eye_color'].replace(['blue', 'brown', 'gray', 'black', 'green', 'hazel', 'yellow', 'idk'],
                                                 [0, 1, 2, 3, 4, 5, 6, 7])
 
-test = pd.read_excel("../Datasets/Data_Test.xlsx").loc[:, ['description', 'eye_color']]
+test = pd.read_excel("BERT/Datasets/Data_Test.xlsx").loc[:, ['description', 'eye_color']]
 test['eye_color'] = test['eye_color'].replace(['blue', 'brown', 'gray', 'black', 'green', 'hazel', 'yellow', 'idk'],
                                               [0, 1, 2, 3, 4, 5, 6, 7])
 
-# train = pd.read_excel("../Datasets/Data_Train.xlsx").loc[:,['description', 'hair_color']]
+# train = pd.read_excel("BERT/Datasets/Data_Train.xlsx").loc[:,['description', 'hair_color']]
 # train['hair_color']=train['hair_color'].replace(['brown', 'red', 'gray', 'black', 'blonde', 'white', 'orange', 'idk'],
 #                                                   [0, 1, 2, 3, 4, 5, 6, 7])
 #
-# test = pd.read_excel("../Datasets/Data_Test.xlsx").loc[:,['description', 'hair_color']]
+# test = pd.read_excel("BERT/Datasets/Data_Test.xlsx").loc[:,['description', 'hair_color']]
 # test['hair_color'] = test['hair_color'].replace(['brown', 'red', 'gray', 'black', 'blonde', 'white', 'orange', 'idk'],
 #                                                 [0, 1, 2, 3, 4, 5, 6, 7])
 
@@ -70,7 +70,7 @@ MAX_SEQ_LENGTH = 200
 BATCH_SIZE = 16
 LEARNING_RATE = 3e-5    # eye
 # LEARNING_RATE = 2e-5    # hair
-NUM_TRAIN_EPOCHS = 15.0
+NUM_TRAIN_EPOCHS = 10.0
 WARMUP_PROPORTION = 0.1
 SAVE_CHECKPOINTS_STEPS = 300
 SAVE_SUMMARY_STEPS = 100

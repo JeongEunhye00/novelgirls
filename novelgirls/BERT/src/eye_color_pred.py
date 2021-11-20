@@ -4,11 +4,11 @@ from novelgirls.BERT.src.model import model_fn_builder
 from novelgirls.BERT.src.create_tokenizer import create_tokenizer_from_hub_module as create_tokenizer
 
 
-MODEL_DIR = '../trained_model/bert_eye_color'
+MODEL_DIR = 'BERT/trained_model/bert_eye_color'
 MAX_SEQ_LENGTH = 200
 BATCH_SIZE = 16
 LEARNING_RATE = 3e-5
-NUM_TRAIN_EPOCHS = 15.0
+NUM_TRAIN_EPOCHS = 10.0
 WARMUP_PROPORTION = 0.1
 SAVE_CHECKPOINTS_STEPS = 300
 SAVE_SUMMARY_STEPS = 100
