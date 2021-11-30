@@ -64,7 +64,7 @@ ______
 
 2018년 구글이 공개한 사전 훈련된 언어모델으로, 자연어 처리와 관련된 여러 개의 task를 수행한다. 
 
-- **문장 한 개 분류(Single Sentence Classification) **
+- **문장 한 개 분류(Single Sentence Classification)**
 
 - 문장 두 개의 관계 분류(Sentence Pair Classification)
 
